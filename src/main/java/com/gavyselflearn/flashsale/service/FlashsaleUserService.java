@@ -17,7 +17,7 @@ import javax.servlet.http.Cookie;
 @Service
 public class FlashsaleUserService {
 
-    private static final String COOKI_NAME_TOKEN = "";
+    public static final String COOK1_NAME_TOKEN = "token";
 
     @Autowired
     FlashsaleDao flashsaleDao;
@@ -52,6 +52,6 @@ public class FlashsaleUserService {
         redisService.set(FlashsaleUserKey.token, token, user);
         //Cookie cookie = new Cookie();
         return true;
-
     }
+
 }
